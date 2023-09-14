@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--bootstrap css link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!--fontawsome link-->
+    <script
+      src="https://kit.fontawesome.com/7382729093.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--fontawsome link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Grandiflora+One&family=Noto+Serif+Makasar&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--cdn link for animation css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Barbie</title>
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      /*navbar section */
+
+      .navbar-section {
+        overflow: hidden;
+        background-color: rgb(255, 77, 169);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        color: black;
+      }
+
+      ul {
+        list-style: none;
+        text-decoration: none;
+      }
+
+      li {
+        padding: 10px;
+      }
+
+      .logo {
+        font-size: 30px;
+        font-family: "Dancing Script", cursive;
+      }
+
+      .logo-text {
+        color: white;
+      }
+
+      /*styling home section*/
+      .home {
+        height: 800px;
+      }
+      .home-section {
+        width: 100%;
+        height: 800px;
+        margin-top: 60px;
+        margin: 0 auto;
+        background-image: url(hiB.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-attachment: fixed;
+        background-color: rgb(243, 147, 197);
+      }
+
+      .home .home-content {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0 auto;
+      }
+
+      h1 {
+        font-size: 40px;
+        color: white;
+      }
+
+      h2 {
+        font-size: 75px;
+        color: white;
+        font-family: "Dancing Script", cursive;
+      }
+
+      button {
+        padding: 20px 30px;
+        margin-top: 30px;
+        background-color: rgb(255, 77, 169);
+        border: transparent;
+        border-radius: 35px;
+        color: white;
+        font-size: 20px;
+      }
+
+      button:hover {
+        padding: 20px 30px;
+        margin-top: 30px;
+        background-color: white;
+        border: transparent;
+        border-radius: 35px;
+        color: rgb(255, 77, 169);
+      }
+
+      marquee {
+        background-color: rgb(255, 77, 169);
+        color: white;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      audio {
+        background-color: #ff4dab;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      /*about*/
+
+      .about-section {
+        background-color: #facee6;
+      }
+      .about-heading {
+        text-align: center;
+        font-size: 45px;
+      }
+
+      .about-title {
+        font-family: "Dancing Script", cursive;
+      }
+
+      .about-text {
+        background: linear-gradient(
+          to top,
+          #fdcbf1 0%,
+          #fdcbf1 1%,
+          #e6dee9 100%
+        );
+        width: 600px;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: 2px 2px 4px #f132b8;
+        border-radius: 90px;
+        padding: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .barbie-ken {
+        background-image: url(bndken.png);
+        background-size: cover;
+        height: 750px;
+        width: 400px;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding-bottom: 30px;
+      }
+
+      .h1-top {
+        margin-top: 70px;
+        font-size: 45px;
+        font-family: "Dancing Script", cursive;
+      }
+
+      .h1-bottom {
+        margin-top: 580px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 40px;
+      }
+
+      /* gallery styling*/
+
+      .galleryheading {
+        text-align: center;
+        font-size: 48px;
+      }
+
+      .gallery-section {
+        width: 100%;
+        height: 600px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #ff4dab;
+      }
+
+      #gallery {
+        background-color: #ff4dab;
+      }
+
+      #main-image {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .thumbnails {
+        text-align: center;
+      }
+
+      .gallery-text {
+        text-align: center;
+        color: white;
+        font-style: oblique;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .thumbnail.selected {
+        border: 2px solid #ff4dab;
+        border-radius: 80px;
+      }
+
+      /*trailer*/
+
+      #trailer {
+        background-color: rgb(243, 147, 197);
+        background-image: url("");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .trailer-heading {
+        text-align: center;
+        font-size: 48px;
+      }
+
+      .trailer-vid {
+        text-align: center;
+      }
+
+      iframe {
+        border: 2px #ff4dab;
+        border-radius: 50px;
+      }
+
+      .trailer-title {
+        font-family: "Dancing Script", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar-section">
+      <div class="scroll-button">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+      </div>
+
+      <nav>
+        <div class="navbar">
+          <div class="logo">
+            <img src="barbie png2.png" width="50px" /><a
+              href="#"
+              class="logo-text"
+              >Barbie</a
+            >
+          </div>
+
+          <ul class="menu d-flex flex-wrap">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#trailer">Trailer</a></li>
+            <li><a href="#cast">Cast</a></li>
+            <li><a href="#socials">Socials</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!--home section-->
+
+    <div class="home" id="home">
+      <div class="home-section my-5">
+        <div class="home-content">
+          <div class="text" data-aos="fade-down">
+            <h1 class="my-heading">Hi,</h1>
+            <h2 class="my-heading">I'm Stereotypical Barbie</h2>
+          </div>
+
+          <div class="button">
+            <button><a href="#trailer">Play trailer</a></button>
+          </div>
+          <marquee class="my-4"
+            >I'm a barbie girl, in a barbie world. Life in plastic, its
+            fantastic! you can brush my hair, and dress me everywhere.
+            Imagination, life is your creation.</marquee
+          >
+          <div>
+            <audio controls autoplay loop>
+              <source src="hiBarbie-audio.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--about-->
+
+    <div id="about" class="about-section" data-aos="fade-down">
+      <h1 class="about-heading">
+        About <span class="about-title">Barbie</span>
+      </h1>
+      <div class="container d-flex flex-row justify-content-center flex-wrap">
+        <div class="about-text bg-primary" data-aos="fade-right">
+          "Stereotypical Barbie" unfolds in Barbieland, a matriarchal society
+          inhabited by various iterations of Barbie and Ken dolls. While Kens
+          enjoy carefree beach days, the Barbies hold esteemed positions as
+          professionals. Barbie, the central character, initially rejects Ken's
+          affection in favor of her independent pursuits. However, an
+          existential crisis prompts Barbie to embark on a quest to cure her
+          sudden physical flaws. Alongside Ken, who seeks a purpose beyond
+          Barbie, and guided by a tween owner named Sasha, Barbie discovers the
+          root of her crisis lies in societal expectations and beauty standards.
+          The story challenges gender norms and ends with Barbie's return to the
+          real world as "Barbara Handler." Barbie's journey mirrors a broader
+          transformation within Barbieland. As Ken inadvertently sparks a
+          revolution among his fellow Kens, the Barbies, previously confined to
+          submissive roles, reclaim their power. Themes of autonomy,
+          self-discovery, and dismantling oppressive systems come to the
+          forefront. Barbie and Ken reconcile, acknowledging their mistakes and
+          paving the way for a more equitable society. Gloria, Sasha's mother
+          and a Mattel employee, plays a pivotal role in inspiring the Barbies
+          to break free from their limitations. The narrative's conclusion sees
+          Barbie embracing her fluid identity, reflecting the ever-evolving
+          story of the iconic doll. As she returns to the real world, now known
+          as "Barbara Handler," she embarks on a new chapter, highlighting the
+          importance of self-acceptance and continued growth. "Stereotypical
+          Barbie" offers a compelling tale of transformation, empowerment, and
+          challenging societal norms, resonating with audiences of all ages.
+        </div>
+
+        <div class="barbie-ken" data-aos="fade-left">
+          <h1 class="h1-top">She's everything!</h1>
+          <h1 class="h1-bottom">He's just Ken!</h1>
+        </div>
+      </div>
+    </div>
+    <!--gallery-->
+
+    <div id="gallery" class="gallery-section">
+      <h1 class="galleryheading">Gallery</h1>
+      <div class="main-image-container">
+        <img
+          src="barbie poster.jpg"
+          alt="image 1"
+          id="main-image"
+          width="800px"
+        />
+        <div class="gallery-overlay">
+          <h3 class="gallery-text">View Gallery</h3>
+        </div>
+      </div>
+
+      <div class="thumbnails">
+        <img
+          src="barbie poster.jpg"
+          alt="Thumbnail Image 1"
+          data-array-index="0"
+          data-selected="true"
+          id="image-1"
+          class="thumbnail"
+          width="100px"
+        />
+
+        <img
+          src="barbie poster.jpg"
+          alt="Thumbnail Image 2"
+          data-array-index="1"
+          data-selected="false"
+          id="image-2"
+          class="thumbnail"
+          width="100px"
+        />
+
+        <img
+          src="barbieStereo.jpg"
+          alt="Thumbnail Image 3"
+          data-array-index="2"
+          data-selected="false"
+          id="image-3"
+          class="thumbnail"
+          width="100px"
+        />
+
+        <img
+          src="barbie poster.jpg"
+          alt="Thumbnail Image 1"
+          data-array-index="0"
+          data-selected="true"
+          id="image-1"
+          class="thumbnail"
+          width="100px"
+        />
+
+        <img
+          src="barbie poster.jpg"
+          alt="Thumbnail Image 2"
+          data-array-index="1"
+          data-selected="false"
+          id="image-2"
+          class="thumbnail"
+          width="100px"
+        />
+
+        <img
+          src="barbieStereo.jpg"
+          alt="Thumbnail Image 3"
+          data-array-index="2"
+          data-selected="false"
+          id="image-3"
+          class="thumbnail"
+          width="100px"
+        />
+      </div>
+    </div>
+
+    <!--trailer-->
+    <div id="trailer" class="trailer-content p-2" width="500px">
+      <h1 class="trailer-heading">
+        <span class="trailer-title">Barbie</span> Trailer
+      </h1>
+      <div class="container">
+        <div class="trailer-vid">
+          <iframe
+            class="my-5"
+            width="640"
+            height="360"
+            src="https://www.youtube.com/embed/pBk4NYhWNMM"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--bootstrap js link-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--cdn link for animation javascript-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      //gallery
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let mainImage = document.getElementById("main-image");
+        let thumbnails = document.querySelectorAll(".thumbnail");
+
+        thumbnails.forEach(function (thumbnail) {
+          thumbnail.addEventListener("click", function () {
+            mainImage.src = thumbnail.src;
+
+            thumbnails.forEach(function (item) {
+              item.classList.remove("selected");
+            });
+
+            thumbnail.classList.add("selected");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
