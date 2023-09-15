@@ -81,7 +81,7 @@
         height: 800px;
         margin-top: 60px;
         margin: 0 auto;
-        background-image: url(hiB.png);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/117/original/hiB.png?1694727809);
         background-repeat: no-repeat;
         background-position: right;
         background-attachment: fixed;
@@ -98,15 +98,26 @@
         padding-left: 0 auto;
       }
 
-      h1 {
+      .heading-1 {
         font-size: 40px;
         color: white;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
 
-      h2 {
+      .heading-2 {
         font-size: 75px;
         color: white;
         font-family: "Dancing Script", cursive;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 24px;
+        color: white;
+        letter-spacing: 1px;
+        line-height: 1.5;
       }
 
       button {
@@ -117,14 +128,11 @@
         border-radius: 35px;
         color: white;
         font-size: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       button:hover {
-        padding: 20px 30px;
-        margin-top: 30px;
         background-color: white;
-        border: transparent;
-        border-radius: 35px;
         color: rgb(255, 77, 169);
       }
 
@@ -174,7 +182,7 @@
       }
 
       .barbie-ken {
-        background-image: url(bndken.png);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/121/original/bndken.png?1694727899);
         background-size: cover;
         height: 750px;
         width: 400px;
@@ -197,21 +205,24 @@
 
       /* gallery styling*/
 
-      .galleryheading {
+      .gallery-heading {
         text-align: center;
         font-size: 48px;
+        color: #ff4dab;
       }
+
+      .gallery-title {
+        font-family: "Dancing Script", cursive;
+         color: #ff4dab;
+      }
+      
 
       .gallery-section {
         width: 100%;
-        height: 600px;
+        height: 700px;
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color: #ff4dab;
-      }
-
-      #gallery {
-        background-color: #ff4dab;
+        background-color: #f7e2f1;
       }
 
       #main-image {
@@ -221,6 +232,9 @@
 
       .thumbnails {
         text-align: center;
+        border: solid 3px #ff4dab;
+        border-radius: 20px;
+        padding: 5px;
       }
 
       .gallery-text {
@@ -262,7 +276,62 @@
 
       .trailer-title {
         font-family: "Dancing Script", cursive;
+        
       }
+
+      /*quote*/
+
+      .quote-heading {
+        text-align: center;
+        font-size: 48px;
+        color: #ff4dab;
+      }
+
+      .quote-title {
+        font-family: "Dancing Script", cursive;
+        color: #ff4dab;
+
+      }
+
+      .skills {
+        padding: 20px;
+      }
+
+      .container-skills {
+        border: solid 3px #ff4dab;
+        border-radius: 20px;
+      }
+
+      .card {
+        margin: 15px;
+        background-color: #facee6;
+        padding: 20px;
+      }
+
+      h2 {
+        color: white;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      /*cast*/
+    .cast {
+      background-color: rgb(238, 86, 193);
+    }
+
+    .card h2 {
+      text-align: center;
+    }
+
+    h1{
+      color: white;
+    }
+
+     .container-cast {
+        border: solid 3px white;
+        border-radius: 20px;
+      }
+        
     </style>
   </head>
   <body>
@@ -274,11 +343,10 @@
       <nav>
         <div class="navbar">
           <div class="logo">
-            <img src="barbie png2.png" width="50px" /><a
-              href="#"
-              class="logo-text"
-              >Barbie</a
-            >
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/120/original/barbie_png2.png?1694727872"
+              width="50px"
+            /><a href="#" class="logo-text">Barbie</a>
           </div>
 
           <ul class="menu d-flex flex-wrap">
@@ -286,8 +354,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#trailer">Trailer</a></li>
+            <li><a href="#quote">Quotes</a></li>
             <li><a href="#cast">Cast</a></li>
-            <li><a href="#socials">Socials</a></li>
           </ul>
         </div>
       </nav>
@@ -299,8 +367,8 @@
       <div class="home-section my-5">
         <div class="home-content">
           <div class="text" data-aos="fade-down">
-            <h1 class="my-heading">Hi,</h1>
-            <h2 class="my-heading">I'm Stereotypical Barbie</h2>
+            <h1 class="heading-1">Hi,</h1>
+            <h2 class="heading-2">I'm Stereotypical Barbie</h2>
           </div>
 
           <div class="button">
@@ -364,100 +432,269 @@
     <!--gallery-->
 
     <div id="gallery" class="gallery-section">
-      <h1 class="galleryheading">Gallery</h1>
-      <div class="main-image-container">
-        <img
-          src="barbie poster.jpg"
-          alt="image 1"
-          id="main-image"
-          width="800px"
-        />
-        <div class="gallery-overlay">
-          <h3 class="gallery-text">View Gallery</h3>
+      <h1 class="gallery-heading">
+        <span class="gallery-title">Barbie </span>Gallery
+      </h1>
+      <div class="container container-skills my-5 p-5">
+        <div class="main-image-container">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/142/original/Enough_About_Ken.png?1694732674"
+            alt="image 1"
+            id="main-image"
+            width="500px"
+          />
+          <div class="gallery-overlay">
+            <h3 class="gallery-text">View Gallery</h3>
+          </div>
         </div>
-      </div>
 
-      <div class="thumbnails">
-        <img
-          src="barbie poster.jpg"
-          alt="Thumbnail Image 1"
-          data-array-index="0"
-          data-selected="true"
-          id="image-1"
-          class="thumbnail"
-          width="100px"
-        />
+        <div class="thumbnails">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/144/original/mission-barbie.jpg?1694733097"
+            alt="Thumbnail Image 1"
+            data-array-index="0"
+            data-selected="true"
+            id="image-1"
+            class="thumbnail"
+            width="75px"
+          />
 
-        <img
-          src="barbie poster.jpg"
-          alt="Thumbnail Image 2"
-          data-array-index="1"
-          data-selected="false"
-          id="image-2"
-          class="thumbnail"
-          width="100px"
-        />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/142/original/Enough_About_Ken.png?1694732674"
+            alt="Thumbnail Image 2"
+            data-array-index="1"
+            data-selected="false"
+            id="image-2"
+            class="thumbnail"
+            width="100px"
+          />
 
-        <img
-          src="barbieStereo.jpg"
-          alt="Thumbnail Image 3"
-          data-array-index="2"
-          data-selected="false"
-          id="image-3"
-          class="thumbnail"
-          width="100px"
-        />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/149/original/b-k.jpg?1694733373"
+            alt="Thumbnail Image 3"
+            data-array-index="2"
+            data-selected="false"
+            id="image-3"
+            class="thumbnail"
+            width="100px"
+          />
 
-        <img
-          src="barbie poster.jpg"
-          alt="Thumbnail Image 1"
-          data-array-index="0"
-          data-selected="true"
-          id="image-1"
-          class="thumbnail"
-          width="100px"
-        />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/122/original/barbie_poster.jpg?1694727966"
+            alt="Thumbnail Image 1"
+            data-array-index="0"
+            data-selected="true"
+            id="image-1"
+            class="thumbnail"
+            width="100px"
+          />
 
-        <img
-          src="barbie poster.jpg"
-          alt="Thumbnail Image 2"
-          data-array-index="1"
-          data-selected="false"
-          id="image-2"
-          class="thumbnail"
-          width="100px"
-        />
-
-        <img
-          src="barbieStereo.jpg"
-          alt="Thumbnail Image 3"
-          data-array-index="2"
-          data-selected="false"
-          id="image-3"
-          class="thumbnail"
-          width="100px"
-        />
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/124/original/barbieStereo.jpg?1694728001"
+            alt="Thumbnail Image 2"
+            data-array-index="1"
+            data-selected="false"
+            id="image-2"
+            class="thumbnail"
+            width="90px"
+          />
+        </div>
       </div>
     </div>
 
     <!--trailer-->
-    <div id="trailer" class="trailer-content p-2" width="500px">
+    <div id="trailer" class="trailer-content p-2" data-aos="fade-down">
       <h1 class="trailer-heading">
         <span class="trailer-title">Barbie</span> Trailer
       </h1>
       <div class="container">
         <div class="trailer-vid">
           <iframe
-            class="my-5"
-            width="640"
-            height="360"
-            src="https://www.youtube.com/embed/pBk4NYhWNMM"
+            width="560"
+            height="315"
+            src="https://www.imdb.com/videoembed/vi945734681/"
             frameborder="0"
             allowfullscreen
           ></iframe>
         </div>
       </div>
     </div>
+
+    <!--quotes-->
+
+    <section>
+      <div class="bg-light skills" id="quote" data-aos="fade-down">
+        <h1 class="quote-heading">
+          <span class="quote-title">Barbie</span> Quotes
+        </h1>
+        <div
+          class="container container-skills d-flex flex-row flex-wrap justify-content-center skills-section my-5 p-5"
+        >
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              "When I found out the patriarchy wasn't about horses, I lost
+              interest anyway."
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              "Thanks to Barbie, all problems of feminism have been solved."
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              "We mothers stand still so our daughters can look back and see how
+              far they have come."
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              “Barbie has a great day every day, but Ken only has a great day if
+              Barbie looks at him.”
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              “I hope nobody sees us. We have a life-size Barbie in our car.”
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>“I’m trained to stand confidently here.”</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              “It is the best day ever. So was yesterday, and so is tomorrow,
+              and every day from now until forever.”
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>“Every night is girls night.”</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              “I would never wear heels if my feet were shaped like this.”
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>
+              “We have to always be extraordinary but somehow we’re always doing
+              it wrong.”
+            </h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>“Oh, my God! I had a Weird Barbie!”</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <h2>“Either you’re brainwashed or you’re weird.”</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--cast-->
+
+    <section>
+      <div class="cast" id="cast" data-aos="fade-down">
+        <h1 class="trailer-heading">
+          <span class="trailer-title">Barbie</span> Cast
+        </h1>
+        <div
+          class="container container-cast d-flex flex-row flex-wrap justify-content-center skills-section  p-5"
+        >
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/138/original/stereo-b.jpg?1694731538"
+              alt="barbie"
+            />
+            <h2>Stereotypical Barbie</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/140/original/ken.jpg?1694731566"
+              alt="barbie"
+            />
+            <h2>Ken</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/139/original/wierd-barbie.jpg?1694731556"
+              alt="barbie"
+            />
+            <h2>Wierd Barbie</h2>
+          </div>
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/137/original/lawyer-barbie.jpg?1694731518"
+              alt="barbie"
+            />
+            <h2>Lawyer Barbie</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/136/original/human-barbie.jpg?1694731499"
+              alt="barbie"
+            />
+            <h2>Human Barbie</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/135/original/diplomat-barbie.jpg?1694731482"
+              alt="barbie"
+            />
+            <h2>Diplomat Barbie</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/134/original/auther-barbie.jpg?1694731464"
+              alt="barbie"
+            />
+            <h2>Auther Barbie</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/133/original/another-ken.jpg?1694731445"
+              alt="barbie"
+            />
+            <h2>Another Ken</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/132/original/alan-barbie.jpg?1694731425"
+              alt="barbie"
+            />
+            <h2>Alan</h2>
+          </div>
+
+          <div class="card" style="width: 16rem" data-aos="fade-down">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/125/original/barbie-mermaid.jpg?1694728510"
+              alt="barbie"
+            />
+            <h2>Mermaid Barbie</h2>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
 
     <!--bootstrap js link-->
     <script
