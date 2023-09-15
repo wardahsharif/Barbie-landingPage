@@ -78,10 +78,11 @@
       }
       .home-section {
         width: 100%;
-        height: 800px;
+        height: 900px;
         margin-top: 60px;
         margin: 0 auto;
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/117/original/hiB.png?1694727809);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/117/original/hiB.png?1694727809),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/171/original/5466917.jpg?1694737127);
         background-repeat: no-repeat;
         background-position: right;
         background-attachment: fixed;
@@ -100,17 +101,28 @@
 
       .heading-1 {
         font-size: 40px;
-        color: white;
+        color: #ff4dab;
         letter-spacing: 2px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
 
       .heading-2 {
         font-size: 75px;
-        color: white;
+        color: #ff4dab;
         font-family: "Dancing Script", cursive;
         letter-spacing: 3px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      h3 {
+        color: #ff4dab;
+        font-size: 35px;
+        font-style: italic;
+      }
+
+      .h3-title {
+        font-family: "Dancing Script", cursive;
+        color: #ff4dab;
       }
 
       p {
@@ -121,6 +133,7 @@
       }
 
       button {
+        font-family: "Dancing Script", cursive;
         padding: 20px 30px;
         margin-top: 30px;
         background-color: rgb(255, 77, 169);
@@ -139,8 +152,9 @@
       marquee {
         background-color: rgb(255, 77, 169);
         color: white;
-        font-style: italic;
+        font-family: "Dancing Script", cursive;
         font-weight: bold;
+        font-size: 30px;
       }
 
       audio {
@@ -213,9 +227,8 @@
 
       .gallery-title {
         font-family: "Dancing Script", cursive;
-         color: #ff4dab;
+        color: #ff4dab;
       }
-      
 
       .gallery-section {
         width: 100%;
@@ -276,7 +289,6 @@
 
       .trailer-title {
         font-family: "Dancing Script", cursive;
-        
       }
 
       /*quote*/
@@ -290,7 +302,6 @@
       .quote-title {
         font-family: "Dancing Script", cursive;
         color: #ff4dab;
-
       }
 
       .skills {
@@ -315,23 +326,36 @@
       }
 
       /*cast*/
-    .cast {
-      background-color: rgb(238, 86, 193);
-    }
+      .cast {
+        background-color: rgb(238, 86, 193);
+      }
 
-    .card h2 {
-      text-align: center;
-    }
+      .card h2 {
+        text-align: center;
+      }
 
-    h1{
-      color: white;
-    }
+      h1 {
+        color: white;
+      }
 
-     .container-cast {
+      .container-cast {
         border: solid 3px white;
         border-radius: 20px;
       }
-        
+
+      .coded-by {
+        text-align: center;
+        background-color: #f7c3eb;
+        color: #f6329b;
+      }
+
+      .coded-by a {
+        color: #f62a97;
+      }
+
+      .coded-by a:hover {
+        color: #f7c3eb;
+      }
     </style>
   </head>
   <body>
@@ -350,12 +374,27 @@
           </div>
 
           <ul class="menu d-flex flex-wrap">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#trailer">Trailer</a></li>
-            <li><a href="#quote">Quotes</a></li>
-            <li><a href="#cast">Cast</a></li>
+            <li>
+              <a href="#home"><strong>Home</strong></a>
+            </li>
+            <li>
+              <a href="#about"><strong>About</strong></a>
+            </li>
+            <li>
+              <a href="#gallery"><strong>Gallery</strong></a>
+            </li>
+            <li>
+              <a href="#trailer"><strong>Trailer</strong></a>
+            </li>
+            <li>
+              <a href="#quote"><strong>Quote</strong></a>
+            </li>
+            <li>
+              <a href="#cast"><strong>Cast</strong></a>
+            </li>
+            <li>
+              <a href="#codedby"><strong>Coder</strong></a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -368,22 +407,25 @@
         <div class="home-content">
           <div class="text" data-aos="fade-down">
             <h1 class="heading-1">Hi,</h1>
-            <h2 class="heading-2">I'm Stereotypical Barbie</h2>
+            <h2 class="heading-2">Welcome to Barbieland</h2>
           </div>
 
           <div class="button">
             <button><a href="#trailer">Play trailer</a></button>
           </div>
           <marquee class="my-4"
-            >I'm a barbie girl, in a barbie world. Life in plastic, its
-            fantastic! you can brush my hair, and dress me everywhere.
-            Imagination, life is your creation.</marquee
+            >I'm a Barbie girl, in the Barbie world Life in plastic, it's
+            fantastic You can brush my hair, and dress me everywhere
+            Imagination, life is your creation</marquee
           >
           <div>
             <audio controls autoplay loop>
               <source src="hiBarbie-audio.mp3" type="audio/mpeg" />
             </audio>
           </div>
+          <h3 class="p-5 my-5">
+            Unleash your inner <span class="h3-title"> Barbie</span>
+          </h3>
         </div>
       </div>
     </div>
@@ -610,7 +652,7 @@
           <span class="trailer-title">Barbie</span> Cast
         </h1>
         <div
-          class="container container-cast d-flex flex-row flex-wrap justify-content-center skills-section  p-5"
+          class="container container-cast d-flex flex-row flex-wrap justify-content-center skills-section p-5"
         >
           <div class="card" style="width: 16rem" data-aos="fade-down">
             <img
@@ -664,7 +706,7 @@
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/134/original/auther-barbie.jpg?1694731464"
               alt="barbie"
             />
-            <h2>Auther Barbie</h2>
+            <h2>Author Barbie</h2>
           </div>
 
           <div class="card" style="width: 16rem" data-aos="fade-down">
@@ -690,11 +732,15 @@
             />
             <h2>Mermaid Barbie</h2>
           </div>
-
-
         </div>
       </div>
     </section>
+
+    <div class="coded-by bg-light" id="codedby">
+      <h4>
+        Open source code by <a href="https://github.com/wardahsharif">Wardah</a>
+      </h4>
+    </div>
 
     <!--bootstrap js link-->
     <script
